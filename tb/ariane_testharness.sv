@@ -585,7 +585,9 @@ module ariane_testharness #(
     .AXI_ADDR_WIDTH ( AXI_ADDRESS_WIDTH        ),
     .AXI_DATA_WIDTH ( AXI_DATA_WIDTH           ),
     .AXI_ID_WIDTH   ( ariane_soc::IdWidthSlave ),
-    .NR_CORES       ( 1                        )
+    .NR_CORES       ( 1                        ),
+    .axi_req_t      ( ariane_axi::req_t        ),
+    .axi_resp_t     ( ariane_axi::resp_t       )
   ) i_clint (
     .clk_i       ( clk_i          ),
     .rst_ni      ( ndmreset_n     ),

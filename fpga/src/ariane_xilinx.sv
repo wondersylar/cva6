@@ -457,7 +457,9 @@ clint #(
     .AXI_ADDR_WIDTH ( AxiAddrWidth     ),
     .AXI_DATA_WIDTH ( AxiDataWidth     ),
     .AXI_ID_WIDTH   ( AxiIdWidthSlaves ),
-    .NR_CORES       ( 1                )
+    .NR_CORES       ( 1                ),
+    .axi_req_t      ( ariane_axi::req_t  ),
+    .axi_resp_t     ( ariane_axi::resp_t )
 ) i_clint (
     .clk_i       ( clk            ),
     .rst_ni      ( ndmreset_n     ),

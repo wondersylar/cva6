@@ -466,7 +466,9 @@ module riscv_peripherals #(
     .AXI_ADDR_WIDTH ( AxiAddrWidth ),
     .AXI_DATA_WIDTH ( AxiDataWidth ),
     .AXI_ID_WIDTH   ( AxiIdWidth   ),
-    .NR_CORES       ( NumHarts     )
+    .NR_CORES       ( NumHarts     ),
+    .axi_req_t      ( ariane_axi::req_t  ),
+    .axi_resp_t     ( ariane_axi::resp_t )
   ) i_clint (
     .clk_i                         ,
     .rst_ni                        ,
